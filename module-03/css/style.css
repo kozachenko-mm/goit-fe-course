@@ -1,59 +1,108 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 body {
-  width: 1200px;
+  width: 900px;
 }
-ul {
-  margin: 70px auto 90px;
-  text-align: center;
-  font-size: 14px;
-  text-transform: uppercase;
+
+header {
+  width: 900px;
+  padding: 75px 158px 0px 158px;
+  margin-bottom: 100px;
 }
-.list-item {
+
+li {
   display: inline-block;
-  margin: auto 55px;
 }
-.list-link {
+
+.list-item1 {
+  margin-right: 120px;
+}
+
+.list-item2 {
+  margin-right: 100px;
+}
+
+.list-item3 {
+  margin-right: 90px;
+}
+
+.site-navigation a {
+  text-transform: uppercase;
   text-decoration: none;
+  color: #626262;
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
 }
+
+.site-navigation a:hover {
+  color: #03a9f4;
+}
+/*или фокус или ховер*/
+/* .site-navigation a:focus {
+  color: #03a9f4;
+} */
+
 .block-left {
   display: inline-block;
-  width: 425px;
-  margin: auto 60px 130px auto;
-  padding-left: 140px;
+  width: 421px;
+  margin: auto 54px 130px auto;
+  /* padding-left: 140px; */
 }
+
 .block-right {
   display: inline-block;
-  width: 425px;
+  width: 421px;
   margin: auto auto 130px;
-  padding-right: 140px;
-  text-align: left;
+  /* text-align: left; */
 }
+
 img {
   margin-bottom: 30px;
 }
+
 .caption {
   margin: auto auto 25px;
   text-transform: uppercase;
   font-size: 14px;
+  font-family: "Ubuntu", sans-serif;
+  color: #b4ad9e;
+  font-weight: lighter;
 }
+
 h2 {
+  font-family: "Playfair Display", serif;
   margin-bottom: 35px;
+  font-size: 30px;
+  color: #626262;
+  font-weight: normal;
 }
+
+p {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  color: #626262;
+  line-height: 24px;
+}
+
 .bottom {
-  margin-bottom: 50px;
+  margin-bottom: 55px;
 }
+
 .button {
   text-align: center;
   margin-bottom: 70px;
 }
+
 button {
-  width: 160px;
-  height: 60px;
-  border: 1px solid #000000;
+  width: 162px;
+  height: 62px;
+  border: 1px solid #626262;
   background: inherit;
+  font-family: "Playfair Display", serif;
   font-size: 20px;
+  line-height: 24px;
+  color: #626262;
 }
