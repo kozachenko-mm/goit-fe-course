@@ -62,6 +62,7 @@ li {
 }
 
 img {
+  display: block; 
   margin-bottom: 30px;
 }
 
