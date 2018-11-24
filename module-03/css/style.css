@@ -3,23 +3,27 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.container {
   width: 900px;
   margin: 0 auto;
-  
 }
 
-header { 
+header {
   padding-top: 75px;
   margin-bottom: 100px;
-  text-align: center;
 }
-
-
+.site-navigation a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #626262;
+  font-size: 14px;
+  font-family: "Playfair Display", serif;
+}
 li {
   display: inline-block;
-  width: 170px;
-  }
+  width: 220px;
+  text-align: center;
+}
 
 /* .list-item1 {
   margin-right: 120px;
@@ -33,68 +37,73 @@ li {
   margin-right: 90px;
 } */
 
-.site-navigation a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #626262;
-  font-size: 14px;
-  font-family: "Playfair Display", serif;
-}
-
-.site-navigation a:hover {
+.site-navigation a:hover,
+.site-navigation a:focus {
   color: #03a9f4;
 }
-/*или фокус или ховер*/
-/* .site-navigation a:focus {
-  color: #03a9f4;
-} */
 
+.block {
+  margin-bottom: 130px;
+  font-size: 0;
+}
+.block:last-child {
+  margin: 0;
+}
 .block-left {
   display: inline-block;
-  width: 50%;
+  width: 421px;
+  margin-right: 58px;
+  
   /* margin: 0 0 130px; */
   /* padding-left: 140px; */
 }
-
-.block-right {
-  display: inline-block;
-  width: calc(50% - 4px);
-  /* margin: 0 0 130px; */
-  /* text-align: left; */
+.block-left:nth-child(2n) {
+  margin-right: 0;
 }
 
+/* .block-right {
+  display: inline-block;
+  width: 421px; */
+  /* margin: 0 0 130px; */
+  /* text-align: left; */
+
+
 img {
-  display: block; 
+  display: block;
+  max-width: 100%;
+  height: auto;
+  /* margin-right: 0px; */
   margin-bottom: 30px;
+  font-size: 0;
 }
 
 span {
+  display: block;
   /* margin: auto auto 25px; */
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Ubuntu", sans-serif;
   color: #b4ad9e;
   font-weight: lighter;
+  margin-bottom: 30px;
 }
 
 h2 {
   font-family: "Playfair Display", serif;
-  margin:25px 0 35px;
+  margin-bottom: 35px;
   font-size: 30px;
   color: #626262;
   font-weight: normal;
 }
 
-p {
+.text {
   font-family: "Playfair Display", serif;
   font-size: 14px;
   color: #626262;
   line-height: 24px;
-  }
-.block {
-  margin-bottom: 130px;
 }
-.bottom {
+
+main {
   margin-bottom: 55px;
 }
 
