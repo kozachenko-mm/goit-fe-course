@@ -25,18 +25,6 @@ li {
   text-align: center;
 }
 
-/* .list-item1 {
-  margin-right: 120px;
-}
-
-.list-item2 {
-  margin-right: 100px;
-}
-
-.list-item3 {
-  margin-right: 90px;
-} */
-
 .site-navigation a:hover,
 .site-navigation a:focus {
   color: #03a9f4;
@@ -67,14 +55,12 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-  /* margin-right: 0px; */
   margin-bottom: 30px;
   font-size: 0;
 }
 
 span {
   display: block;
-  /* margin: auto auto 25px; */
   text-transform: uppercase;
   font-size: 14px;
   font-family: "Ubuntu", sans-serif;
@@ -107,11 +93,12 @@ h2 {
 
 button {
   width: 162px;
-  height: 62px;
+  /* height: 62px; */
   border: 1px solid #626262;
   background: inherit;
   font-family: "Playfair Display", serif;
   font-size: 20px;
-  line-height: 24px;
+  /* line-height: 24px; */
   color: #626262;
+  padding: 16px 0;
 }
