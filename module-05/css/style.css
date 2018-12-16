@@ -12,10 +12,13 @@ body {
 }
 img {
   display: block;
- }
+  width: 100%;
+}
 
-/* Start header*/
-.header {
+/* Start nav*/
+.navigation {
+  width: 1110px;
+  margin: 0 auto;
   padding: 32px 0 14px;
   margin-bottom: 8px;
 }
@@ -27,6 +30,7 @@ img {
   font-family: "Roboto", arial;
   color: #555252;
   letter-spacing: -0.02em;
+  text-decoration: none;
 }
 
 .logo::first-letter {
@@ -51,7 +55,7 @@ ul {
   margin-right: 10px;
 }
 
-a {
+li a {
   display: block;
   padding: 5px;
   text-decoration: none;
@@ -70,23 +74,17 @@ a {
 .site-navigation a:focus {
   color: #1abc9c;
 }
-/* Finish header*/
+/* Finish nav*/
 
 /* Start slide*/
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.527)),
+    url(../img/slider-01.png);
+  background-size: cover;
+}
 .slides {
   position: relative;
-  margin: 0 auto;
-  width: 1110px;
   height: 600px;
-}
-.slides ul {
-  list-style: none;
-  transform: translate(-50%);
-  position: absolute;
-  left: 50%;
-  filter: brightness(52%);
-  padding: 0;
-  margin: 0;
 }
 
 .switch {
@@ -100,12 +98,10 @@ a {
   top: 50%;
   cursor: pointer;
 }
-button:hover {
+.switch:hover {
   background: rgb(78, 198, 171);
 }
-.-ctrl-prew {
-  left: 0;
-}
+
 .ctrl-next {
   right: 0;
 }
@@ -133,7 +129,7 @@ button:hover {
   top: 40px;
 }
 
-.slider-caption {
+.box-title {
   width: 740px;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -143,13 +139,15 @@ button:hover {
   text-transform: uppercase;
   color: #fff;
 }
-.slide-text {
+
+.title {
   font-weight: 900;
   letter-spacing: -0.02em;
   font-size: 60px;
-  margin: 0 auto 20px;
+  margin: 0 0 20px;
 }
-.sub-slide-text {
+.subtitle {
+  margin: 0 auto;
   font-weight: 400;
   font-size: 24px;
 }
@@ -159,6 +157,9 @@ button:hover {
 main {
   background: #e9f0fd;
 }
+section {
+  padding: 92px 0;
+}
 h2 {
   text-transform: uppercase;
   font-family: "Roboto", arial;
@@ -167,7 +168,8 @@ h2 {
   letter-spacing: -0.02em;
   margin: 0 auto 106px;
   text-align: center;
-  padding-top: 92px;
+  position: relative;
+  letter-spacing: -0.02em;
 }
 h2::after {
   content: "";
@@ -177,13 +179,13 @@ h2::after {
   position: absolute;
   transform: translateX(-50%);
   left: 50%;
+  top: 74px;
 }
 .prod-items {
   float: left;
   margin-right: 30px;
   width: 255px;
   position: relative;
-  z-index: 22;
 }
 .caption {
   width: 200px;
@@ -215,12 +217,6 @@ h2::after {
 .prod-items:last-child {
   margin-right: 0;
 }
-
-.row {
-  padding-bottom: 96px;
-}
-
-
 .overlay {
   width: 234px;
   height: 264px;
@@ -230,62 +226,89 @@ h2::after {
   top: 10px;
   left: 10px;
 }
-.icon-row {
+.icon-box {
   width: 166px;
+  height: 110px;
   position: absolute;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  margin-bottom: 4px;
+  opacity: 0;
 }
 .basket {
+  width: 164px;
+  height: 48px;
+  text-transform: uppercase;
   position: absolute;
-  transform: translateX(-50%);
-  top: 136px;
-  left: 50%;
-  background: #000;
+  bottom: 0;
+  left: 0;
+  background: #323232;
+  font-family: "Open Sans", sans-serif;
+  color: #f5efef;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 0;
 }
-
-.prod-items:hover .overlay {
-  opacity: 0.549;
+.basket span {
+  padding-left: 45px;
+}
+.basket img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 48px;
 }
 
 .icon {
-  display: inline;  
-  border: 1px solid #fff;
+  margin-right: 2px;
   padding: 0;
-  opacity: 1;
   background: none;
-  cursor: pointer;  
-  margin-right: 4px;
+  cursor: pointer;
+  border: 1px solid #fff;
 }
-.icon:last-child {
+
+.icon:nth-child(3n) {
   margin-right: 0;
+}
+
+.prod-items:hover img {
+  opacity: 0.7;
 }
 .prod-items:hover .caption {
   background: #1abc9c;
-
-  }
+}
 .prod-items:hover .price {
   background: #7fd9c7;
-  }
-
-
+}
+.prod-items:hover .icon-box {
+  opacity: 1;
+}
+.prod-items:hover .overlay {
+  opacity: 0.549;
+}
+.icon:hover,
+.basket:hover {
+  background: #1abc9c;
+  border-color: #1abc9c;
+}
 /* Finish new collection*/
 
 /*Start footer*/
 
 footer {
   background: #323232;
+  padding: 32px;
 }
-address {
+.autor {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   color: #fefefe;
   font-style: normal;
-  padding: 32px 10px;
+
   letter-spacing: -0.02em;
-  }
+  margin: 0 auto;
+}
 .name {
   color: #46bfa9;
   text-decoration: none;
