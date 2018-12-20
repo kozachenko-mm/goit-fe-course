@@ -236,8 +236,8 @@ h2::after {
   opacity: 0;
 }
 .basket {
-  width: 164px;
-  height: 48px;
+  width: 166px;
+  height: 50px;
   text-transform: uppercase;
   position: absolute;
   bottom: 0;
@@ -250,18 +250,19 @@ h2::after {
   border: 1px solid #fff;
   padding: 0;
 }
-.basket span {
-  padding-left: 45px;
-}
+
 .basket img {
   position: absolute;
   top: 0;
   left: 0;
   max-width: 48px;
 }
+.basket span {
+  padding-left: 30px;
+}
 
 .icon {
-  margin-right: 2px;
+  margin-right: 4px;
   padding: 0;
   background: none;
   cursor: pointer;
