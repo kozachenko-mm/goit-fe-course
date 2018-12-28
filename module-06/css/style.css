@@ -50,7 +50,7 @@ nav {
 .list-item a::before {
   content: "";
   display: block;
-  width: 100%;
+  width: calc(100% - 20px);
   border-bottom: 2px solid #f38181;
   position: absolute;
   transform: translateX(-50%);
@@ -100,7 +100,7 @@ h2::before {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  text-align: center;
+  min-height: 330px;
 }
 .features-item {
   box-sizing: border-box;
@@ -108,7 +108,6 @@ h2::before {
   position: relative;
   padding-left: 62px;
   text-align: left;
-  min-height: 170px;
 }
 h5 {
   font-family: "Montserrat", sans-serif;
@@ -234,6 +233,7 @@ h5 {
   color: #999999;
   font-weight: 300;
   font-style: italic;
+  margin: 0 auto;
 }
 
 main {
@@ -247,31 +247,36 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  }
+  padding: 8px 0;
+}
 .footer-text {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   color: #333333;
   font-weight: 400;
-  padding: 24px;
+  margin: 0;
 }
 .footer-link {
   color: #f38181;
   text-decoration: none;
 }
-
+form {
+  display: flex;
+  align-items: center;
+}
 input {
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  /* font-size: px; */
   color: #999999;
   font-weight: 300;
   font-style: italic;
-  width: 230px;
-  height: 34px;
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #e5e5e5;
 }
 input::-webkit-input-placeholder {
-   color: #cccccc;
-   }
+  color: #cccccc;
+}
 button {
   border: none;
   background: #95e1d3;
@@ -280,6 +285,6 @@ button {
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 12px 30px;
+  padding: 10px 30px;
   cursor: pointer;
 }
