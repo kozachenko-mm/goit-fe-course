@@ -106,8 +106,8 @@ h4 {
 .service-item-1,
 .service-item-2,
 .service-item-3 {
-  min-height: 206px;
   width: 284px;
+  
 }
 .service-item-1::before,
 .service-item-2::before,
@@ -180,17 +180,19 @@ h5 {
   font-family: "Montserrat", serif;
   font-weight: 700;
   font-size: 14px;
-  text-transform: uppercase;
   border-radius: 2px;
   border: none;
   box-sizing: border-box;
+  outline: 2px solid rgba(255, 255, 255, 0);
 }
-:required:invalid {
+
+:required:invalid:not(:placeholder-shown) {
   outline-color: #ff0000;
 }
-:required:valid {
+:required:valid:not(:placeholder-shown) {
   outline-color: #00ff00;
 }
+
  input[type="submit"] {
   padding: 22px 46px;
   color: #ffffff;
@@ -202,5 +204,8 @@ h5 {
   border: none;
   background: #fed136;
   letter-spacing: -0.025em;
+ }
+ ::placeholder {
+   text-transform: uppercase;
  }
  /* finish section form*/
