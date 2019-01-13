@@ -55,6 +55,7 @@ header {
   background-repeat: no-repeat;
   padding: 18px 0 138px;
   margin-bottom: 64px;
+  text-align: center;
 }
 
 .enter {
@@ -73,15 +74,20 @@ header {
 .enter button:hover {
   border: 2px solid rgba(255, 255, 255, 1);
 }
+nav {
+  margin-bottom: 26px;
+}
 
 .logo {
   display: block;
+  margin: 0 auto;
   text-decoration: none;
   font-size: 20px;
   letter-spacing: 0.04em;
-  margin-bottom: 26px;
+  
 }
 .title {
+  width: 320px;
   font-size: 30px;
   text-transform: uppercase;
   margin: 0 auto 10px;
@@ -96,6 +102,8 @@ header {
   margin: 0 auto 14px;
 }
 .find {
+  display: block;
+  margin: 0 auto;
   background-color: #ff4e50;
   cursor: pointer;
   border: none;
