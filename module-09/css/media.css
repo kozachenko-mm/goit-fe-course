@@ -40,7 +40,7 @@
   }
   .item-partner {
     margin-bottom: 56px;
-    min-width: 234px;
+    max-width: 222px;
   }
   .item-partner-2 {
     margin-bottom: 0;
@@ -53,7 +53,7 @@
   }
 }
 
-@media (min-width: 940px) {
+@media (min-width: 992px) {
   nav {
     width: 940px;
     margin: 0 auto;

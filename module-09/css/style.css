@@ -31,11 +31,7 @@ img {
     url(../fonts/roboto-v18-latin-300.woff2) format("woff2");
 }
 
-.container {
-  width: 320px;
-  margin: 0 auto;
-  text-align: center;
-}
+
 .enter button,
 .logo,
 .title,
