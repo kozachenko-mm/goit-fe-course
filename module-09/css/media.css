@@ -9,7 +9,7 @@
     flex-direction: row-reverse;
     align-items: center;
     padding: 18px 50px 110px;
-    width: 768px;
+    width: 670px;
     margin: 0 auto 26px;
     box-sizing: border-box;
   }
@@ -19,7 +19,7 @@
   }
   .title {
     font-size: 52px;
-    width: 492px;
+    max-width: 520px;
     margin-bottom: 24px;
   }
   .sub-title {
@@ -54,6 +54,7 @@
 }
 
 @media (min-width: 992px) {
+  
   nav {
     width: 940px;
     margin: 0 auto;

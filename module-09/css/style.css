@@ -42,6 +42,7 @@ img {
 }
 .logo {
   text-transform: uppercase;
+  text-align: center;
 }
 
 header {
@@ -87,7 +88,7 @@ a:hover {
   text-decoration: none;
 }
 .title {
-  width: 320px;
+  
   font-size: 30px;
   text-transform: uppercase;
   margin: 0 auto 10px;
@@ -98,7 +99,7 @@ a:hover {
   font-weight: 300;
   color: #fff;
   font-size: 18px;
-  width: 224px;
+  
   margin: 0 auto 14px;
 }
 .find {
@@ -108,7 +109,7 @@ a:hover {
   cursor: pointer;
   border: none;
   border-radius: 100px;
-  width: 282px;
+  
   font-size: 14px;
   padding: 12px;
   letter-spacing: -0.02em;
@@ -198,7 +199,7 @@ a:hover {
   cursor: pointer;
   border: 2px solid #ff4e50;
   border-radius: 100px;
-  width: 282px;
+  /* width: 282px; */
   font-size: 14px;
   padding: 10px;
   font-family: "Montserrat", sans-serif;
