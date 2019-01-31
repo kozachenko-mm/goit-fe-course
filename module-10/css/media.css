@@ -1,0 +1,22 @@
+@media (max-width:800px) {
+    nav {
+       display: block;
+       text-align: center; 
+    }
+    .nav,
+    .footer {
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    .header__title {
+        font-size: 70px;
+    }
+    .header__subtitle {
+        font-size: 34px;
+    }
+    form {
+        width: 320px;
+        margin: 0 auto;
+    }
+}
