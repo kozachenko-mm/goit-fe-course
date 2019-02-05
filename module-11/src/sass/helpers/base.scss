@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url(../fonts/montserrat-v12-latin-regular.woff) format("woff"),
+    url(../fonts/montserrat-v12-latin-regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url(../fonts/montserrat-v12-latin-700.woff) format("woff"),
+    url(../fonts/montserrat-v12-latin-700.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-weight: 400;
+  src: url(../fonts/roboto-v18-latin-regular.woff) format("woff"),
+    url(../fonts/roboto-v18-latin-regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Kaushan Script";
+  font-weight: 400;
+  src: url(../fonts/kaushan-script-v7-latin-regular.woff) format("woff"),
+    url(../fonts/kaushan-script-v7-latin-regular.woff2) format("woff2");
+}
+
+.btn {
+  font-family: $primery-text;
+  color: $first-text-color;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: none;
+  border: none;
+}

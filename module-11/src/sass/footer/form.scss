@@ -1,0 +1,29 @@
+form {
+  width: 31.66%;
+  display: flex;
+  @media (max-width: 800px) {
+    width: 320px;
+    margin: 0 auto;
+  }
+}
+
+input {
+  font-family: $secondary-text;
+  font-size: 15px;
+  color: $minor-text-color;
+  font-weight: 300;
+  font-style: italic;
+  width: 55%;
+  height: 34px;
+}
+
+input::-webkit-input-placeholder {
+  color: $border-color;
+}
+
+.footer__button {
+  border: none;
+  background: $elements-color;
+  font-weight: 700;
+  width: 45%;
+}

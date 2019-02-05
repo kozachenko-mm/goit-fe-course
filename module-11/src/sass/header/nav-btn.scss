@@ -1,0 +1,21 @@
+.nav-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  margin: 0;
+  background: none; 
+  @media (max-width: 800px) {
+    margin: 0 auto;
+    display: block;
+    width: 35%;
+  }
+}
+
+.nav-btn__actions {
+  padding: 0 20px;
+
+  &:hover #magnifier,
+  &:hover #trash {
+    fill: $hover-color;
+  }
+}

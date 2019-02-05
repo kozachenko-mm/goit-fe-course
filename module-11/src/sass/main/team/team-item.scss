@@ -1,0 +1,75 @@
+.team-item {
+  position: relative;
+  background: $elements-color;
+  width: 100%;
+  height: auto;
+  margin-bottom: 28px;
+
+  &__photo {
+    transition-property: transform;
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#ee8889, #eed787);
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition-property: transform;
+
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+  }
+
+  &:hover .soc-box__item {
+    opacity: 1;
+  }
+
+  &:hover .team-item__overlay {
+    -webkit-transition-property: opasity, -webkit-transform;
+    transition-property: opasity, -webkit-transform;
+    -o-transition-property: transform, opasity;
+    transition-property: transform, opasity;
+    transition-property: transform, opasity, -webkit-transform;
+    -webkit-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: translate(-10px, -10px);
+    -ms-transform: translate(-10px, -10px);
+    transform: translate(-10px, -10px);
+    opacity: 0.9;
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+
+  &:hover .soc-box {
+    -webkit-transition-property: opasity, -webkit-transform;
+    transition-property: opasity, -webkit-transform;
+    -o-transition-property: transform, opasity;
+    transition-property: transform, opasity;
+    transition-property: transform, opasity, -webkit-transform;
+    -webkit-transition-duration: 200ms;
+    -o-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transform: translate(calc(-50% - 10px), calc(-50% - 10px));
+    -ms-transform: translate(calc(-50% - 10px), calc(-50% - 10px));
+    transform: translate(calc(-50% - 10px), calc(-50% - 10px));
+    opacity: 1;
+    -webkit-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+  }
+  
+  &:hover .team-item__photo {
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;;
+    transition-duration: 200ms;
+    transform: translate(-10px, -10px);;
+    transition-timing-function: linear;
+  }
+}

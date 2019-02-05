@@ -1,0 +1,23 @@
+.footer {
+  border-top: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+
+  &__text {
+    font-family: $primery-text;
+    font-size: 14px;
+    color: $second-text-color;
+    font-weight: 400;
+  }
+
+  &__link {
+    color: $footer-link-color;
+    text-decoration: none;
+  }
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}

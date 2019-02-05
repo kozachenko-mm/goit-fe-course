@@ -19,4 +19,7 @@
         width: 320px;
         margin: 0 auto;
     }
+    .logo {
+        margin-bottom: 50px;
+    }
 }

@@ -1,0 +1,25 @@
+.header__subtitle {
+  font-family: $cursive-text;
+  color: $first-text-color;
+  font-size: 72px;
+  margin: 0 auto 24px;
+  text-align: center;
+  @media (max-width:800px){
+    font-size: 34px;
+  }
+}
+
+.header__title {
+  font-family: $primery-text;
+  font-weight: 700;
+  color: $first-text-color;
+  font-size: 150px;
+  text-transform: uppercase;
+  margin: 0 auto 110px;
+  letter-spacing: -0.03em;
+  text-align: center;
+  line-height: 0.95;
+  @media (max-width:800px) {
+    font-size: 70px;
+  }
+}

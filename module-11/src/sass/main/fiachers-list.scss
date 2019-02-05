@@ -1,0 +1,41 @@
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+
+  &__item {
+    box-sizing: border-box;
+    width: 382px;
+    position: relative;
+    padding-left: 62px;
+    text-align: left;
+    min-height: 170px;
+    list-style: none;
+  }
+
+  &__title {
+    font-family: $primery-text;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $second-text-color;
+    font-weight: 400;
+    margin: 0 auto 10px;
+  }
+
+  &__icon {
+    position: absolute;
+    transform: translateX(-160%);
+  }
+
+  &__text {
+    font-family: $secondary-text;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    color: $minor-text-color;
+  }
+}

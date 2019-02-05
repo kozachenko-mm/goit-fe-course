@@ -1,0 +1,20 @@
+.header {
+  padding: 20px 0 228px;
+  margin-bottom: 40px;
+
+  background-image: linear-gradient(
+      rgba(243, 129, 129, 0.8),
+      rgba(252, 227, 138, 9)
+    ),
+    url(../images/banner.png);
+  background-size: cover;
+}
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .header {
+    background-image: linear-gradient(
+        rgba(243, 129, 129, 0.8),
+        rgba(252, 227, 138, 9)
+      ),
+      url(../images/banner@2x.png);
+  }
+}

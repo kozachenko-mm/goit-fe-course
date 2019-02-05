@@ -1,0 +1,31 @@
+.title {
+  font-family: $primery-text;
+  font-size: 30px;
+  color: $second-text-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 auto 100px;
+  position: relative;
+}
+
+.subtitle {
+  font-family: $cursive-text;
+  font-size: 24px;
+  color: $second-text-color;
+  text-align: center;
+  margin: 0 0 10px;
+}
+
+.title::before {
+  content: "";
+  display: block;
+  width: 60px;
+  border-bottom: 2px solid $footer-link-color;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  left: 50%;
+  top: 74px;
+}

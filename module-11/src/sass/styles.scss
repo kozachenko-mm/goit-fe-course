@@ -1,0 +1,23 @@
+/*
+   Import partials below
+*/
+@import './helpers/variables.scss';
+@import './normalize';
+@import './helpers/base.scss';
+@import './header/background.scss';
+@import './header/navigation.scss';
+@import './header/logo.scss';
+@import './header/nav-list.scss';
+@import './header/nav-btn.scss';
+@import './header/header-title.scss';
+@import './header/header-btn.scss';
+@import './main/main.scss';
+@import './main/title.scss';
+@import './main/fiachers-list.scss';
+@import './main/team/team-text.scss';
+@import './main/team/galery.scss';
+@import './main/team/card.scss';
+@import './main/team/team-item.scss';
+@import './main/team/soc-box.scss';
+@import './footer/footer.scss';
+@import './footer/form.scss';

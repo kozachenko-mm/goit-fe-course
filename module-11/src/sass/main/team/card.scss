@@ -1,0 +1,24 @@
+.team-card {
+  width: 31.66%;
+  height: auto;
+  
+  &__name {
+    text-align: center;
+    font-family: $primery-text;
+    font-size: 14px;
+    color: $second-text-color;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 0 auto 12px;
+  }
+
+  &__profesion {
+    text-align: center;
+    font-family: $secondary-text;
+    font-size: 15px;
+    color: $minor-text-color;
+    font-weight: 300;
+    font-style: italic;
+    margin: 0 auto;
+  }
+}
