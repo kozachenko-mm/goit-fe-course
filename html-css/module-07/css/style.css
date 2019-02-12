@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  src: url(../fonts/montserrat-v12-latin-regular.woff) format("woff"),
+    url(../fonts/montserrat-v12-latin-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  src: url(../fonts/montserrat-v12-latin-700.woff) format("woff"),
+    url(../fonts/montserrat-v12-latin-700.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Aleo";
+  font-weight: 400;
+  src: url(../fonts/aleo-v1-latin-italic.woff) format("woff"),
+    url(../fonts/aleo-v1-latin-italic.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Charm";
+  font-weight: 400;
+  src: url(../fonts/charm-v3-latin-regular.woff) format("woff"),
+    url(../fonts/charm-v3-latin-regular.woff2) format("woff2");
+}
+@font-face {
+  font-family: "Roboto-slab";
+  font-weight: 400;
+  src: url(../fonts/roboto-slab-v7-latin-regular.woff) format("woff"),
+    url(../fonts/roboto-slab-v7-latin-regular.woff2) format("woff2");
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/*start header*/
+.header {
+  padding-top: 50px;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-decoration: none;
+  color: #fed136;
+  font-family: "Charm", serif;
+  font-size: 26px;
+}
+.site-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+.list-item {
+  list-style: none;
+}
+.list-item a {
+  text-decoration: none;
+  color: #222222;
+  font-family: "Montserrat", serif;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+.list-item a:hover {
+  color: #fed136;
+}
+/*finisf header*/
+
+/*start secction top*/
+section {
+  padding: 106px 0;
+  text-align: center;
+}
+h2 {
+  color: #222222;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: -0.025em;
+  margin: 0 auto 8px;
+}
+h4 {
+  font-family: "Aleo", serif;
+  color: #777777;
+  margin: 0 auto 76px;
+}
+.service-box {
+  display: flex;
+  justify-content: space-between;
+}
+.service-item-1,
+.service-item-2,
+.service-item-3 {
+  width: 284px;
+  
+}
+.service-item-1::before,
+.service-item-2::before,
+.service-item-3::before {
+  content: "";
+  display: inline-block;
+  border: 2px solid #fed136;
+  border-radius: 50%;
+  width: 68px;
+  height: 68px;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 18px;
+}
+.service-item-1::before {
+  background-image: url(../img/icon-01.png);
+}
+.service-item-2::before {
+  background-image: url(../img/icon-02.png);
+}
+.service-item-3::before {
+  background-image: url(../img/icon-03.png);
+}
+h5 {
+  color: #222222;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: -0.04em;
+  margin: 0 auto 12px;
+}
+.service-item-text {
+  color: #777777;
+  font-family: "Roboto-slab", serif;
+  font-size: 14px;
+  letter-spacing: -0.025em;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/*finish section top*/
+/* start section form*/
+.contact {
+  background-image: url(../img/background.png);
+}
+
+.contact-title {
+  color: #ffffff;
+}
+.input-box,
+.input-box-left {
+  display: flex;
+  justify-content: space-between;
+}
+.input-box{
+  margin-bottom: 28px;
+}
+.input-box-left {
+  flex-direction: column;
+  width: 454px;
+}
+.massage {
+  width: 454px;
+}
+
+.input-item,
+.massage {
+  padding: 16px;
+  color: #222222;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 2px;
+  border: none;
+  box-sizing: border-box;
+  outline: 2px solid rgba(255, 255, 255, 0);
+}
+
+:required:invalid:not(:placeholder-shown) {
+  outline-color: #ff0000;
+}
+:required:valid:not(:placeholder-shown) {
+  outline-color: #00ff00;
+}
+
+ input[type="submit"] {
+  padding: 22px 46px;
+  color: #ffffff;
+  font-family: "Montserrat", serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  border: none;
+  background: #fed136;
+  letter-spacing: -0.025em;
+ }
+ ::placeholder {
+   text-transform: uppercase;
+ }
+ /* finish section form*/
