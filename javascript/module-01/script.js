@@ -22,6 +22,6 @@ if (userLogin === adminLogin) {
 } else if (userLogin === null) {
   alert("Отменено пользователем!");
   // при не правильном логине
-} else {
+} else if (userLogin !== adminLogin) {
   alert("Доступ запрещен, неверный логин!");
 }
