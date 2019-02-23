@@ -1,7 +1,7 @@
 "use strict";
 let userInput;
 const numbers = [];
-let sum = 0;
+
 
 do {
   // Просим пользователя ввести число
@@ -12,10 +12,12 @@ do {
 
 // прекращаем цикл при нажатии на cansel
 while (userInput != null);
-
+let sum = 0;
 // Сумируем числа в массиве
 for (let i = 0; i < numbers.length; i+=1) {
   sum += numbers[i];
+  
 }
+
 // Выводим результат на екран
 alert('Сумма введеных чисел = ' + sum);
