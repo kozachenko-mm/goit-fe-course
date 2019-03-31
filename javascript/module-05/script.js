@@ -98,41 +98,19 @@ const users = [
 ];
 
 /* Получить массив имен (поле name) всех пользователей */
-const getAllNames = arr => {
-  const arrName = [];
-  arr.forEach(el => arrName.push(el.name));
-  return arrName;
-};
+const getAllNames = arr =>  arr.map(el => el.name); 
 
 console.log(getAllNames(users));
 
+
 /* Получить массив объектов пользователей по цвету глаз (поле eyeColor) */
-const getUsersByEyeColor = (arr, color) => {
-  const result = [];
-  arr.map(obj => {
-    if (obj.eyeColor === color) {
-      result.push(obj);
-    }
-  });
-  return result;
-};
+const getUsersByEyeColor = (arr, color) => arr.filter(elem => elem.eyeColor === color)
 
 console.log(getUsersByEyeColor(users, "blue"));
 
+
 /* Получить массив имен пользователей по полу (поле gender) */
 
-//  Первый вариант. Решение через Array.map и if
-// const getUsersByGender = (arr, gender) => {
-//   const result = [];
-//   arr.map(obj => {
-//     if (obj.gender === gender) {
-//       result.push(obj.name);
-//     }
-//   });
-//   return result;
-// };
-
-// Второй вариант. Решение через Array.filter и Array.map
 const getUsersByGender = (arr, gender) =>
   arr.filter(elem => elem.gender === gender).map(el => el.name);
 
