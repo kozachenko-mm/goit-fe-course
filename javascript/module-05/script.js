@@ -98,16 +98,15 @@ const users = [
 ];
 
 /* Получить массив имен (поле name) всех пользователей */
-const getAllNames = arr =>  arr.map(el => el.name); 
+const getAllNames = arr => arr.map(el => el.name);
 
 console.log(getAllNames(users));
 
-
 /* Получить массив объектов пользователей по цвету глаз (поле eyeColor) */
-const getUsersByEyeColor = (arr, color) => arr.filter(elem => elem.eyeColor === color)
+const getUsersByEyeColor = (arr, color) =>
+  arr.filter(elem => elem.eyeColor === color);
 
 console.log(getUsersByEyeColor(users, "blue"));
-
 
 /* Получить массив имен пользователей по полу (поле gender) */
 
@@ -163,7 +162,10 @@ console.log(getUsersByFriend(users, "Goldie Gentry")); // [ 'Elma Head', 'Sheree
 // // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
 
 /**
-* Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
-*/
-const getUserNamesSortedByFriendsCount = arr => arr.sort((a, b) => a.friends.length - b.friends.length).map(user => user.name)
+ * Массив имен (поле name) людей, отсортированных в зависимости от количества их друзей (поле friends)
+ */
+const getUserNamesSortedByFriendsCount = arr =>
+  arr
+    .sort((a, b) => a.friends.length - b.friends.length)
+    .map(user => user.name);
 console.log(getUserNamesSortedByFriendsCount(users));
