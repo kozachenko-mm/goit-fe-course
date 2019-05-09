@@ -1,0 +1,44 @@
+
+
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.section {
+    width: 1800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+.card {
+    width: 30%;
+    border: 2px solid #222;
+}
+
+a {
+    text-decoration: none;
+}
+.card__image {
+    margin-bottom: 10px;}
+
+
+.card__title {
+    margin-bottom: 16px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    padding-left: 5px;
+    }
+
+.card__description {
+    font-size: 20px;
+    line-height: 2;
+    color: #000000;
+    padding-left: 5px;
+}
+
