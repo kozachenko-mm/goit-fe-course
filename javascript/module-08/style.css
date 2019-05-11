@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+.container {
+  background: #7ca3ec;
+  padding: 69px 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.image-gallery {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.fullview {
+  margin: 0 auto 15px;
+  border: none;
+  box-shadow: 0 0 15px 5px rgb(46, 3, 236);
+}
+
+.preview {
+  display: flex;
+  justify-content: space-around;
+  /* flex-wrap: wrap; */
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  border: 3px solid #4809f3;
+}
+
+.preview li {
+  padding: 5px;
+}
+
+.preview img {
+  box-shadow: none;
+  cursor: zoom-in;
+  filter: grayscale(80%);
+}
