@@ -30,8 +30,7 @@ const galleryItems = [
 ];
 
 const fullview = document.querySelector(".fullview"),
-      preview = document.querySelector(".preview"),
-      imageGallery = document.querySelector(".js-image-gallery");
+      preview = document.querySelector(".preview");
 
 // Устанавливаем  первую картинку заглавной
 fullview.innerHTML = `<img src = '${galleryItems[0].fullview}'>`;
@@ -49,21 +48,21 @@ preview.innerHTML = liPrewiew;
 
 // делаем заглавной картинкой выбраную кликом из галлереи
 function getFull(event) {
-  fullview.innerHTML = `<img src = ${event.target.dataset.fullview}>`;
+  if (event.target.nodeName !== "IMG") return;
+  const img = fullview.querySelector("img");
+  img.setAttribute("src", event.target.dataset.fullview);
 }
 preview.addEventListener("click", getFull);
 
 // Убираем фильтр при наведении курсора на картинку
-const previewImg = preview.querySelectorAll("li > img");
-
 function getFilter(event) {
+  if (event.target.nodeName !== "IMG") return;
   event.target.style.filter = "none";
-  
 }
-previewImg.forEach(el => el.addEventListener("mouseover", getFilter));
+preview.addEventListener("mouseover", getFilter);
 
 function getFilterOut(event) {
+  if (event.target.nodeName !== "IMG") return;
   event.target.style.filter = "grayscale(70%)";
-  
 }
-previewImg.forEach(el => el.addEventListener("mouseout", getFilterOut));
+preview.addEventListener("mouseout", getFilterOut);
