@@ -30,7 +30,7 @@ const galleryItems = [
 ];
 
 const fullview = document.querySelector(".fullview"),
-      preview = document.querySelector(".preview");
+  preview = document.querySelector(".preview");
 
 // Устанавливаем  первую картинку заглавной
 fullview.innerHTML = `<img src = '${galleryItems[0].fullview}'>`;
@@ -46,23 +46,32 @@ const liPrewiew = galleryItems.reduce(
 );
 preview.innerHTML = liPrewiew;
 
-// делаем заглавной картинкой выбраную кликом из галлереи
+const imgFull = fullview.querySelector("img"),
+  imgPre = preview.querySelectorAll("img");
+
+imgPre[0].style.filter = "none";
+
 function getFull(event) {
   if (event.target.nodeName !== "IMG") return;
-  const img = fullview.querySelector("img");
-  img.setAttribute("src", event.target.dataset.fullview);
+  // делаем заглавной картинкой выбраную кликом из галлереи
+  imgFull.setAttribute("src", event.target.dataset.fullview);
+  //   ИЛИ эфект затемнения пропадает при клике
+  imgPre.forEach(el => (el.style.filter = "grayscale(70%)"));
+  if (imgFull.getAttribute("src") == event.target.dataset.fullview) {
+    event.target.style.filter = "none";
+  }
 }
 preview.addEventListener("click", getFull);
 
-// Убираем фильтр при наведении курсора на картинку
-function getFilter(event) {
-  if (event.target.nodeName !== "IMG") return;
-  event.target.style.filter = "none";
-}
-preview.addEventListener("mouseover", getFilter);
+// ИЛИ убираем фильтр при наведении курсора на картинку
+// function getFilter(event) {
+//   if (event.target.nodeName !== "IMG") return;
+//   event.target.style.filter = "none";
+// }
+// preview.addEventListener("mouseover", getFilter);
 
-function getFilterOut(event) {
-  if (event.target.nodeName !== "IMG") return;
-  event.target.style.filter = "grayscale(70%)";
-}
-preview.addEventListener("mouseout", getFilterOut);
+// function getFilterOut(event) {
+//   if (event.target.nodeName !== "IMG") return;
+//   event.target.style.filter = "grayscale(70%)";
+// }
+// preview.addEventListener("mouseout", getFilterOut);
