@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+}
+
+.stopwatch {
+  width: 400px;
+  margin: 0 auto;
+  font-size: 30px;
+  color: brown;
+  text-align: center;
+}
+
+.btn{
+  width: 130px;
+}
+
+.laps {
+  margin: 0 auto;
+  width: 400px;
+  color: green;
+  text-align: center;
+  font-size: 20px;
+}

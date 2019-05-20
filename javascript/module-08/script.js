@@ -46,7 +46,7 @@ const liPrewiew = galleryItems.reduce(
 );
 preview.innerHTML = liPrewiew;
 
-const imgFull = fullview.querySelector("img"),
+const imgFull = fullview.querySelector("img"), 
   imgPre = preview.querySelectorAll("img");
 
 imgPre[0].style.filter = "none";
