@@ -10,25 +10,19 @@ btnStart.addEventListener("click", getStart);
 btnTakeLap.addEventListener("click", getValueLap);
 btnReset.addEventListener("click", getReset);
 
-let counterMs = 0,
-  counterSec = 0,
-  counterMin = 0;
+let counterMs,
+  counterSec,
+  counterMin,
+  deltaDate = 0,
+  dateNow = 0,
+  timerId = null;
 
 btnReset.disabled = true;
-let timerId = null;
 
-function getReset() {
-  clearInterval(timerId);
-  btnStart.textContent = "Start";
-  list.innerHTML = null;
-  btnReset.disabled = true;
-  (counterMs = 0), (counterSec = 0), (counterMin = 0);
-  timer.textContent = "00:00.0";
-}
 
 function getStart() {
   if (btnStart.textContent == "Start") {
-    (counterMs = 0), (counterSec = 0), (counterMin = 0);
+    deltaDate = 0;
   }
   if (btnStart.textContent == "Pause") {
     btnStart.textContent = "Contunue";
@@ -37,35 +31,34 @@ function getStart() {
   }
   btnReset.disabled = false;
   btnStart.textContent = "Pause";
+  dateNow = Date.now() - deltaDate;
   timerId = setInterval(updateTimerValue, 100);
 }
 
 function updateTimerValue() {
-  counterMs += 1;
-  timer.textContent = `0${counterMin}:0${counterSec}.${counterMs}`;
-  if (counterMs > 9) {
-    counterMs = 0;
-    counterSec += 1;
-    timer.textContent = `0${counterMin}:0${counterSec}.${counterMs}`;
+  deltaDate = Date.now() - dateNow;
+  counterMin = new Date(deltaDate).getMinutes();
+  if (counterMin < 10) {
+    counterMin = `0${counterMin}`;
   }
-  if (counterSec > 9) {
-    timer.textContent = `0${counterMin}:${counterSec}.${counterMs}`;
+  counterSec = new Date(deltaDate).getSeconds();
+  if (counterSec < 10) {
+    counterSec = `0${counterSec}`;
   }
-  if (counterSec > 59) {
-    counterSec = 0;
-    counterMin += 1;
-    timer.textContent = `0${counterMin}:${counterSec}.${counterMs}`;
-  }
-  if (counterMin > 9) {
-    timer.textContent = `${counterMin}:${counterSec}.${counterMs}`;
-  }
+  counterMs = Math.floor(new Date(deltaDate).getMilliseconds() / 100);
+  return (timer.textContent = `${counterMin}:${counterSec}.${counterMs}`);
 }
-
+function getReset() {
+  clearInterval(timerId);
+  btnStart.textContent = "Start";
+  list.innerHTML = null;
+  btnReset.disabled = true;
+  (counterMs = 0), (counterSec = 0), (counterMin = 0);
+  timer.textContent = "00:00.0";
+}
 function getValueLap() {
   const li = document.createElement("li");
   list.appendChild(li);
   li.textContent = timer.textContent;
   btnReset.disabled = false;
 }
-
-
