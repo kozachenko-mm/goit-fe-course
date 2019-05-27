@@ -93,7 +93,7 @@ function getUserValue(event) {
   if (target.dataset.action === "getAll") {
     getAllUsers().then(response => {
       return (result.innerHTML = response.reduce(
-        (acc, el) => (acc += `<p> Имя: ${el.name}, Возраст: ${el.age}</p>`),
+        (acc, el) => (acc += `<p>id: ${el.id} Имя: ${el.name}, Возраст: ${el.age}</p>`),
         ""
       ));
     });
@@ -101,7 +101,7 @@ function getUserValue(event) {
 
   if (target.dataset.action === "getById") {
     getUserById(inputId.value).then(response => {
-      result.textContent = `Имя: ${response.data.name}, Возраст: ${
+      result.textContent = ` id: ${response.data.id} Имя: ${response.data.name}, Возраст: ${
         response.data.age
       }`;
     });
@@ -109,7 +109,7 @@ function getUserValue(event) {
 
   if (target.dataset.action === "add") {
     addUsers(inputName.value, inputAge.value).then(response => {
-      result.textContent = `Новый пользователь: Имя: ${
+      result.textContent = `Новый пользователь: id: ${response.data.id} Имя: ${
         response.data.name
       }, Возраст: ${response.data.age}`;
     });
