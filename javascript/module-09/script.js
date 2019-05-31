@@ -25,7 +25,7 @@ function getStart() {
     deltaDate = 0;
   }
   if (btnStart.textContent == "Pause") {
-    btnStart.textContent = "Contunue";
+    btnStart.textContent = "Continue";
     clearInterval(timerId);
     return;
   }
@@ -46,6 +46,8 @@ function updateTimerValue() {
     counterSec = `0${counterSec}`;
   }
   counterMs = Math.floor(new Date(deltaDate).getMilliseconds() / 100);
+  ;
+  
   return (timer.textContent = `${counterMin}:${counterSec}.${counterMs}`);
 }
 function getReset() {
