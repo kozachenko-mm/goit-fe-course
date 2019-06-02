@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework-11</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title"></h1>
+        <form action="" class="form js-form">
+            <input type="text" placeholder="Имя закладки">
+            <input type="url" placeholder="URL закладки">
+            <button type="submit">Добавить закладку</button>
+        </form>
+
+       
+            <template id="url-cards">
+                {{#each this}}
+                <li class="list-item"> 
+                    <h2 class="name">{{name}}</h2>
+                    <p class="adress">URL: <a href="{{url}}">{{url}}</a></p> 
+                    <button class="delete">Удалить</button>                   
+                </li>
+
+                {{/each}}
+            </template>
+            <ul class="list"></ul>
+        </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
