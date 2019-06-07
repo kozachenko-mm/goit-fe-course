@@ -12,25 +12,25 @@
 
 <body>
     <div class="container">
-        <h1 class="title"></h1>
         <form action="" class="form js-form">
-            <input type="text" placeholder="Имя закладки">
-            <input type="url" placeholder="URL закладки">
-            <button type="submit">Добавить закладку</button>
+            <input class="form__name" type="text" placeholder="Имя закладки">
+            <input class="form__url" type="url" placeholder="URL закладки">
+            <button class="btn" type="submit">Добавить закладку</button>
         </form>
 
        
             <template id="url-cards">
                 {{#each this}}
                 <li class="list-item"> 
-                    <h2 class="name">{{name}}</h2>
+                    <h2 class="name">Имя закладки:<span class="name--weight">{{name}}</span> </h2>
                     <p class="adress">URL: <a href="{{url}}">{{url}}</a></p> 
-                    <button class="delete">Удалить</button>                   
+                    <button class=" btn delete" data-action ="del">Удалить</button>                   
                 </li>
 
                 {{/each}}
             </template>
             <ul class="list"></ul>
+            <div class="modal modal-hidden js-modal-backdrop"></div>
         </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
